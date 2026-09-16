@@ -6,10 +6,12 @@ def cadastrar():
 
     nome = input("Nome: ")
     email = input("E-mail: ")
+    numero = input("Numero de telefone: ")
 
     usuario = {
         "nome": nome,
-        "email": email
+        "email": email,
+        "numero": numero
     }
 
     cadastros.append(usuario)
@@ -27,6 +29,7 @@ def consultar():
         print(f"\nID: {i}")
         print(f"Nome: {usuario['nome']}")
         print(f"E-mail: {usuario['email']}")
+        print(f"Telefone: {usuario['numero']}")
 
 def atualizar():
     print("\nATUALIZAR")
@@ -50,6 +53,7 @@ def atualizar():
 
         usuario["nome"] = input("Novo nome: ")
         usuario["email"] = input("Novo e-mail: ")
+        usuario["numero"] = input("Novo telefone: ")
 
         print("\nCadastro atualizado com sucesso!")
 
